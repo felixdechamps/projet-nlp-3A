@@ -1,0 +1,7 @@
+dotenv
+huggingface_hub
+transformers
+datasets
+peft
+trl
+accelerate
