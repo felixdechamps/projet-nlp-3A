@@ -6,3 +6,4 @@ peft
 trl
 accelerate
 bitsandbytes
+ipywidgets
