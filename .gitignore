@@ -208,5 +208,6 @@ __marimo__/
 
 data/
 results_checkpoints/
+results_checkpoints_8B/
 unsloth_compiled_cache/
 Llama-1B-Archelec-Final-20260409-1742/
