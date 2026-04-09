@@ -1,5 +1,6 @@
 dotenv
 huggingface_hub
+unsloth
 transformers
 datasets
 peft
@@ -7,3 +8,5 @@ trl
 accelerate
 bitsandbytes
 ipywidgets
+matplotlib
+scikit-learn
