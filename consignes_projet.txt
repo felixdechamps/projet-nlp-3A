@@ -1,0 +1,110 @@
+ENSAE NLP 2026
+
+News 19/03/2026:
+Topic modeling lab answer https://github.com/Deep-NLP-Course/nlp-lab-answers
+more data for the projet: 1973 and 1978 legislatives
+News 13/03/2026:
+Course evaluation survey : https://forms.gle/jBoPdZ5VEiZ8QE6H9
+
+
+Lectures
+
+Slides : https://teklia-my.sharepoint.com/:f:/p/kermorvant/IgCaqS46oFDZS6DfU2HVeWE4AfWJBAamwbVo5Hps_vGc4Yc?e=jcE5Gv
+
+30/01: Introduction, towards vector representation of documents and words (TFIDF, LSI, Glove, wod2vec, tSNE)
+
+06/02: Vector representations of words and documents (word2vec, FastText), Language Models (RNN)
+
+13/02: Computational Linguistics and Named-Entity Recognition
+
+20/03: Topic modelling (1/2) + Attention models
+
+27/03: Topic modelling (2/2) + Tokenisation + Conversational Models + RAG
+
+13/03/2026 : Course Evaluation Survey, LLM prompting, Current trends
+
+Labs
+
+TP1 Text classification : https://github.com/Deep-NLP-Course/nlp-lab-text-classification
+TP2 Text Embeddings : https://github.com/Deep-NLP-Course/nlp-lab-text-embedding/tree/main
+TP3 Named Entity Recognition : https://github.com/Deep-NLP-Course/nlp-lab-ner
+TP4 topic Modelling : https://github.com/Deep-NLP-Course/nlp-lab-topic/blob/main/nlp-lab-topic.ipynb
+Lab answers
+
+https://github.com/Deep-NLP-Course/nlp-lab-answers
+Evaluation of the course
+
+You can work in small group (2 or 3 persons) but the report must be individual
+The deadline to submit your mini-project/project is April, 30th 2026
+send it to ensae.nlp@gmail.com with your Lab advisor in CC.
+The grading criteria for project evaluation are:
+Adherence to guidelines and report structure, quality of writing (no LLM style), delay : 3 points
+Relevance of data analysis: 3 points
+Releance of the state-of-the-art: 3 points
+Relevance of the proposed models: 3 points
+Implementation of the models: 3 points
+Dicussion of results: 5 points
+Assessment for this course will take the form of a personal project. The project consists in writing a scientific report on a chosen analysis of the Archelec corpus using NLP tools.
+
+The Archelec corpus is a collection of documents consisting of the manifestos of candidates in the elections of the French fifth republic. These documents were collected and digitised by Sciences Po
+
+Archelec, les archives électorales françaises de la Ve République, du papier au numérique : reflet fidèle ou distorsion ? Odile Gaultier-Voituriez.
+More bibliographical references : Fonds Archives électorales
+
+They have been imported and OCRed (transcribed) in Arkindex : https://demo.arkindex.org/browse/1bc39ca6-399b-47ca-9de1-ab2ef481cabb?top_level=true&folder=true
+
+The project must consist of the following stages:
+
+Define a problem on the corpus requiring the use of NLP techniques.
+Retrieve, format and describe the data statistically
+Search the literature on the chosen problem and write a short state-of-the-art
+Propose and justify of the choice of the model(s)
+Experiment with the proposed model
+Write an analysis of the results and a conclusion
+The article should follow the layout of the NEURIPS conference https://www.overleaf.com/latex/templates/neurips-2024/tpsbbrdqcmsh
+
+Both the code and the PDF version of the article should be stored in a github repository.
+
+How to get the data ?
+
+The metadata can be downloaded in CSV format from the Archelec website : https://archelec.sciencespo.fr/explorer
+
+The transcriptions are in a git repository: https://gitlab.teklia.com/ckermorvant/arkindex_archelec
+
+Problem proposals (in increasing difficulty order)
+
+You can choose a subject from the list below or propose your own (validate if with your Lab advisor)
+Style analysis ⭐
+
+Gender Classification: Is there a “feminine” or “masculine” rhetoric within the manifestos?
+Political affiliation detection :
+predict the titulaire-soutien (support) or liste (party list)
+analyze confusion matrices to identify which parties “speak the same language”
+compute the semantic similarity of the documents and display them in 2D with their political support or party list. Identify outliers.
+Metadata extraction ⭐
+
+Train a Named-entity extraction model using the metadata file.
+Evaluate on the Archelec corpus
+Evaluate on the more recent corpus https://github.com/regardscitoyens/professions-foi-candidats/tree/master
+Sponsorship and personality extraction: Use NER to extract the names of national leaders mentioned (“De Gaulle” “Mitterrand”). Who cites whom? Does a local candidate prefer to link themselves to a national figure or distance themselves?
+Spatial analysis: extract mentioned locations to determine if the discourse is purely rooted locally or if it projects toward national/international stakes.
+Linguistic analysis ⭐
+
+Semantic Density and “Wooden Language” (Langue de Bois) : measure the ratio of “meaning-carrying” words to “filler” or “abstract” words. Cross-reference with titulaire-profession or titulaire-soutien
+The populism of simplicity: Linguistic complexity trends over time or accross parties. Calculate readability scores for every document and plot the mean complexity against the date, the titulaire-soutien or the titulaire-profession.
+Topic Modeling & Temporal Evolution ⭐⭐
+
+Thematic propensity by party: for a specific election, calculate the distribution of themes for each political side.
+Specialization by party : identify themes where a party is significantly over-represented compared to the national average for that election.
+Semantic mapping : use Topic Modeling to extract dominant themes, then project the different candidates or parties into this thematic space and plot a map
+Correlation between topic and metadata: cross-reference dominant topics with socio-cultural metadata like titulaire-profession or titulaire-age. (e.g., “Do candidates from agricultural backgrounds focus on local farming themes or do they strictly follow their party’s national talking points?”).
+Thematic sentiment analysis: Move beyond identifying what is being said to how it is being said. If two parties mention “Europe,” one might use defensive/skeptical vocabulary while the other uses positive/integrationist vocabulary
+Discourse versus economic reality: compare manifesto themes with real-world economic indicators using the departement-insee code. For example, is the frequency of the “Unemployment” topic higher in departments where the actual unemployment rate is higher?
+Analyzing the iconography of political manifestos ⭐⭐⭐
+
+Analyse and measure the evolution of the visual style in time or accross party.
+photo-heavy vs. text-heavy
+color palettes used
+presence of national symbols or objects
+The candidate portrait analysis : Is the candidate alone or in a crowd? Are they smiling? Are they wearing a suit or casual clothing? What is the background (an office, a factory, or a rural field)? Cross-reference these features with the titulaire-profession or titulaire-sexe.
+Multimodal sentiment: image versus text, does the image always say the same thing as the text? Compare the sentiment/tone of the text with the visual emotion of the photographies.
