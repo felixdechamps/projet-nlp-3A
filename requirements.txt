@@ -10,3 +10,6 @@ bitsandbytes
 ipywidgets
 matplotlib
 scikit-learn
+seaborn
+nltk
+spacy
